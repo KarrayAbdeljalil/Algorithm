@@ -1,0 +1,21 @@
+ALGORITHM algorithm_name
+VAR
+    i : INTEGER ;
+    V : INTEGER :=0 ;
+    L : INTEGER :=0 ;
+    NW : INTEGER :=1 ;
+    P : STRING := 'Hello Every Body.'
+BEGIN
+    FOR i FROM 1 TO length(P) STEP step  DO
+        L:= L + 1 ;
+        IF (P[i] = ' ') THEN
+            NW := NW + 1 ;
+        END_IF
+        IF (upcase(P[i]) in ('A','E','I','Y','O','U')) THEN
+            V := V + 1 ;
+        END_IF
+    END_FOR
+    WRITE('Length of sentence is', L)
+    WRITE('Number of words is', NW)
+    WRITE('Number of vowels is', V)
+END
